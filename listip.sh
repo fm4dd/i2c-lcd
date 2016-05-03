@@ -1,12 +1,4 @@
 #!/bin/bash
-# -------------------------------------- #
-# I2C control script for a AQM0802A LCD  #
-# This is the cron-repeated standard LCD #
-# output for OS parameters, inlcding IPs #
-#                                        #
-# 2015-12-21 support@frank4dd.com        #
-# -------------------------------------- #
-
 IFS=$'\n'
 declare -A ip
 
@@ -27,13 +19,13 @@ done
 /srv/scripts/lcdwrite 2 "NE BLACK"
 sleep 2
 /srv/scripts/lcdwrite 1 "Load:"
-/srv/scripts/lcdwrite 2 `w |grep load |awk {'print $10'}`
+/srv/scripts/lcdwrite 2 `uptime |awk '{gsub(/\,/,""); print $10}'`
 sleep 2
 /srv/scripts/lcdwrite 1 "Memory:"
 /srv/scripts/lcdwrite 2 `free -m | grep Mem | awk {'print $3"/"$2 "M"'}`
 sleep 2
-/srv/scripts/lcdwrite 1 `date +%x`
-/srv/scripts/lcdwrite 2 `date +%X`
+/srv/scripts/lcdwrite 1 `date +"%m/%d/%y"`
+/srv/scripts/lcdwrite 2 `date +%T`
 
 for iface in "${!ip[@]}"
 do

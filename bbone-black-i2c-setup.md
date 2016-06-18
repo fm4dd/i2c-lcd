@@ -11,7 +11,8 @@ First step is to de-compile the running default device tree binary file into a e
 ```
 mkdir ~/enable-i2c
 cd enable-i2c
-dtc -I dtb -O dts am57xx-beagle-x15.dtb > am57xx-beagle-x15.dts
+cp /boot/dtbs/4.1.17-ti-rt-r47/am335x-boneblack.dtb .
+dtc -I dtb -O dts am335x-boneblack.dtb > am335x-boneblack.dts
 ```
 
 Note: Compiling the decompiled am57xx-beagle-x15.dts back will create a identical dtb binary.

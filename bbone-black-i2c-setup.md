@@ -1,6 +1,8 @@
 # Setting up the I2C bus on a Beaglebone Black
 
-The Beaglebone Black provides three I2C connections, two of them only available by changing the default GPIO pin configuration. In my use case, I am operating a 2x7 character LCD on I2C bus #2, and a battery-buffered RTC on I2C bus #3. GPIO pin configurations are loaded at boot time from device tree binary (.dtb) files.
+The Beaglebone Black provides three I2C connections, two of them only available by changing the default GPIO pin configuration. In my use case, I am operating a 2x7 character LCD on I2C bus #2, and a battery-buffered RTC on I2C bus #3. 
+
+GPIO pin configurations are loaded at boot time from device tree binary (.dtb) files, which can be compied from configuration source files (.tds). A number of pre-compiled .dtb files exist for use with popular capes.
 
 Two enable I2C #2 and #3, the following steps were taken:
 

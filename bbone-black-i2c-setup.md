@@ -45,7 +45,7 @@ and enable the custom overlay in /boot/uEnv.txt, e.g. as follows:
 dtb=am335x-boneblack-fm4dd.dtb
 ```
 
-Notes: Any mistakes may break the next boot. In that case, we need a fallback into a rescue boot, such as starting from the micro SD card with a stock BBB image (even a old Debian 7.5 image, fitting into 2GB, works fine. After forcing a SD card boot by holding the S2 boot switch during power-up, we login, mount the eMMC partition, and edit /boot/uEnv.txt back. Remove SD card and boot from eMMC into the original setup.
+Notes: Any mistakes may break the next boot. In that case, we need a fallback into a rescue boot. Starting from the micro SD card with a stock BBB image, even using a old Debian 7.5 image fitting into 2GB, works fine. After forcing a SD card boot by holding the S2 boot switch during power-up, we login, mount the eMMC partition, and edit /boot/uEnv.txt back. Remove SD card and boot from eMMC into the original setup.
 
 If the .dts file edit was correct and BBB boots up, we now have all three I2C busses available:
 ```

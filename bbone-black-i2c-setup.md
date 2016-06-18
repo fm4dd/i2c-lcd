@@ -82,8 +82,8 @@ root@athos:/home/ubuntu/source/i2c-lcd# i2cdetect -r -y 2
 ```
 
 Notes: 
-- On I2C2 I have the 2x7 character LCD under the address 3e.
-- On I2C1 I have the Epson RX 8025N RTC clock with address 32.
+- On I2C2 I have the 2x7 character LCD under the address 0x3e.
+- On I2C1 I have the Epson RX 8025N RTC clock with address 0x32.
 
 See also:
 http://beagleboard.narkive.com/M53sw2BE/how-to-make-bbb-pins-work-after-ubuntu-trusty-install

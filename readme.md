@@ -2,7 +2,7 @@
 
 ## HD44870 character LCD display via PCF8574 backpack module
 
-pcf8574-lcd-demo.c is example code how to drive a standard HD44870 character LCD display over a I2C-connected PCF8574-based backpack module.
+<a href="https://github.com/fm4dd/i2c-lcd/blob/master/pcf8574-lcd-demo.c">pcf8574-lcd-demo.c</a> is example code how to drive a standard HD44870 character LCD display over a I2C-connected PCF8574-based backpack module.
 Tested on a Raspberry Pi 3.
 
 ![](images/pcf8574-lcd-i2c-demo.jpg)
